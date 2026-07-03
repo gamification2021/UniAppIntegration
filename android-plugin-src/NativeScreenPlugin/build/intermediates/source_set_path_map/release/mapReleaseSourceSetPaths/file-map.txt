@@ -1,0 +1,7 @@
+com.example.nativescreenplugin.NativeScreenPlugin-pngs-0 D:\Uniapp\android-plugin-src\NativeScreenPlugin\build\generated\res\pngs\release
+com.example.nativescreenplugin.NativeScreenPlugin-resValues-1 D:\Uniapp\android-plugin-src\NativeScreenPlugin\build\generated\res\resValues\release
+com.example.nativescreenplugin.NativeScreenPlugin-mergeReleaseResources-2 D:\Uniapp\android-plugin-src\NativeScreenPlugin\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.nativescreenplugin.NativeScreenPlugin-mergeReleaseResources-3 D:\Uniapp\android-plugin-src\NativeScreenPlugin\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.nativescreenplugin.NativeScreenPlugin-release-4 D:\Uniapp\android-plugin-src\NativeScreenPlugin\build\intermediates\merged_res\release\mergeReleaseResources
+com.example.nativescreenplugin.NativeScreenPlugin-main-5 D:\Uniapp\android-plugin-src\NativeScreenPlugin\src\main\res
+com.example.nativescreenplugin.NativeScreenPlugin-release-6 D:\Uniapp\android-plugin-src\NativeScreenPlugin\src\release\res

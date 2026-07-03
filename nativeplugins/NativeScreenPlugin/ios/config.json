@@ -1,0 +1,15 @@
+{
+	"plugins": [
+		{
+			"type": "module",
+			"name": "NativeScreenPlugin",
+			"class": "NativeScreenModule"
+		}
+	],
+	"frameworks": [
+		"NativeScreenPlugin.framework"
+	],
+	"embedFrameworks": [
+		"ThirdParty.xcframework"
+	]
+}

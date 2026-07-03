@@ -1,0 +1,36 @@
+{
+  "plugins": [
+    {
+      "type": "module",
+      "name": "NativeScreenPlugin",
+      "class": "com.example.nativescreenplugin.NativeScreenModule"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "spin_and_win-debug",
+      "type": "localAAR",
+      "description": "SpinAndWin AAR library. Place spin_and_win-debug.aar in this folder."
+    },
+    {
+      "name": "androidx.appcompat:appcompat:1.6.0",
+      "type": "remote"
+    },
+    {
+      "name": "androidx.constraintlayout:constraintlayout:2.1.4",
+      "type": "remote"
+    },
+    {
+      "name": "com.google.android.material:material:1.7.0",
+      "type": "remote"
+    },
+    {
+      "name": "com.airbnb.android:lottie:3.3.1",
+      "type": "remote"
+    },
+    {
+      "name": "com.github.peterbetos:LuckyWheel:ed811a46b6",
+      "type": "remote"
+    }
+  ]
+}
