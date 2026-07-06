@@ -1,0 +1,11 @@
+export type GameActionResult = {
+	action : string
+}
+
+export type OpenGameScreenOptions = {
+	success ?: (res : GameActionResult) => void,
+	fail ?: (res : any) => void,
+	complete ?: (res : any) => void
+}
+
+export type OpenGameScreen = (options : OpenGameScreenOptions) => void

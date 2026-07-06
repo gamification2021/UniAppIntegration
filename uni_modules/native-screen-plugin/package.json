@@ -1,0 +1,23 @@
+{
+	"id": "native-screen-plugin",
+	"displayName": "Native Screen Plugin (iOS - Gamification UTS)",
+	"version": "1.0.0",
+	"description": "Opens the Gamification SDK's game screen via a UTS iOS plugin wrapping GamificationFramework.xcframework.",
+	"_dp_type": "uni_module",
+	"uni_modules": {
+		"dependencies": [],
+		"encrypt": [],
+		"platforms": {
+			"client": {
+				"Vue": {
+					"vue2": "y",
+					"vue3": "y"
+				},
+				"App": {
+					"app-vue": "y",
+					"app-uvue": "u"
+				}
+			}
+		}
+	}
+}

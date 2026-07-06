@@ -7,6 +7,11 @@
             "packageName" : "io.dcloud.HBuilder",
             "playground" : "custom",
             "type" : "uni-app:app-android"
+        },
+        {
+            "customPlaygroundType" : "local",
+            "playground" : "custom",
+            "type" : "uni-app:app-ios"
         }
     ]
 }

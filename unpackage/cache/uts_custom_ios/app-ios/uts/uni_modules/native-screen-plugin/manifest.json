@@ -1,0 +1,173 @@
+{
+  "version": "1",
+  "env": {
+    "compilerVersion": "5.07"
+  },
+  "files": {
+    "utssdk/app-ios/index.uts": {
+      "md5": "cd0cde18b682cd9ddac993f46da28a8d"
+    },
+    "utssdk/interface.uts": {
+      "md5": "2861f55ac39da44217a34246744298db"
+    },
+    "package.json": {
+      "md5": "99427c5698d3c0a4609ddf26ba666e36"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/Info.plist": {
+      "md5": "2b6c7ccdca0885e421398c7cd8f4b98e"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Assets.car": {
+      "md5": "c6cf2802df010cdecfe5bccb993d5f31"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/CustomNavView.nib": {
+      "md5": "b54ddbd89f57042a43e00e8fa7047dcb"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/GamificationFramework": {
+      "md5": "ab7751810d6fe61970ec465ca2c70066"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Info.plist": {
+      "md5": "7526ae12dfd4c3772bbd8d3a2dd00cb7"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/LICENSE": {
+      "md5": "434ed18bfc59f68fe49ca63ee01cb995"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/README.md": {
+      "md5": "45ac8e01637a101945be80fab278ba94"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/SpinerContainerView.nib": {
+      "md5": "58c1944edf7237af3733674a564cb504"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/WishPopUp.nib": {
+      "md5": "3a33bec358f63b299d41ecceb2256869"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Assets.car": {
+      "md5": "c6cf2802df010cdecfe5bccb993d5f31"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/CustomNavView.nib": {
+      "md5": "b54ddbd89f57042a43e00e8fa7047dcb"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/GamificationFramework": {
+      "md5": "7c4fc47bce24d3e4d95d3753e69350a4"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Info.plist": {
+      "md5": "6a676d3cfab67eb2ed5a505822127e55"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/LICENSE": {
+      "md5": "434ed18bfc59f68fe49ca63ee01cb995"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/README.md": {
+      "md5": "45ac8e01637a101945be80fab278ba94"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/SpinerContainerView.nib": {
+      "md5": "58c1944edf7237af3733674a564cb504"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/WishPopUp.nib": {
+      "md5": "3a33bec358f63b299d41ecceb2256869"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/GameList.storyboardc/CommonPlayNowVC.nib": {
+      "md5": "50d16f7a170319031b58e43d40af7c81"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/GameList.storyboardc/GameListController.nib": {
+      "md5": "d580b2c6306e05826a466fc1dc9aa12e"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/GameList.storyboardc/Info.plist": {
+      "md5": "9ade7e2f3da85c560989bf84ff4802a8"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/GameList.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib": {
+      "md5": "aa2bcafff4f4a62a9f290cf3126541a1"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/GameList.storyboardc/hAI-jJ-GCp-view-vlK-ci-ZGR.nib": {
+      "md5": "56e82cc19997294f8e3f8fd352100408"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Modules/module.modulemap": {
+      "md5": "88eaefa77ee281343132695da0575778"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Spin.storyboardc/Info.plist": {
+      "md5": "a10314209efc0c850c446ef7c0e35a66"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Spin.storyboardc/SpinVC.nib": {
+      "md5": "27f4a5a2f937d97215946ff77d860f94"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Spin.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib": {
+      "md5": "bd32aef864fbf508aef62d241f07da67"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Headers/GamificationFramework-Swift.h": {
+      "md5": "6f9e40fd04bcf4b0c08c46668b318982"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Headers/GamificationFramework.h": {
+      "md5": "54079e2af8ff0a3637139380a4b825e2"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/GameList.storyboardc/CommonPlayNowVC.nib": {
+      "md5": "50d16f7a170319031b58e43d40af7c81"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/GameList.storyboardc/GameListController.nib": {
+      "md5": "d580b2c6306e05826a466fc1dc9aa12e"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/GameList.storyboardc/Info.plist": {
+      "md5": "9ade7e2f3da85c560989bf84ff4802a8"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/GameList.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib": {
+      "md5": "aa2bcafff4f4a62a9f290cf3126541a1"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/GameList.storyboardc/hAI-jJ-GCp-view-vlK-ci-ZGR.nib": {
+      "md5": "56e82cc19997294f8e3f8fd352100408"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Headers/GamificationFramework-Swift.h": {
+      "md5": "129b2be965ac41dae2b885f8a0e967f4"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Headers/GamificationFramework.h": {
+      "md5": "54079e2af8ff0a3637139380a4b825e2"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/module.modulemap": {
+      "md5": "88eaefa77ee281343132695da0575778"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Spin.storyboardc/Info.plist": {
+      "md5": "a10314209efc0c850c446ef7c0e35a66"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Spin.storyboardc/SpinVC.nib": {
+      "md5": "27f4a5a2f937d97215946ff77d860f94"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Spin.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib": {
+      "md5": "bd32aef864fbf508aef62d241f07da67"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/_CodeSignature/CodeResources": {
+      "md5": "3df67b81a667a5802fd0909dd4def929"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/arm64-apple-ios.swiftdoc": {
+      "md5": "0970007f6635fd3476847f1e5c159d87"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/arm64-apple-ios.swiftinterface": {
+      "md5": "8e05c6798f90f00895aa495520b7412b"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/arm64.swiftdoc": {
+      "md5": "0970007f6635fd3476847f1e5c159d87"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/arm64.swiftinterface": {
+      "md5": "8e05c6798f90f00895aa495520b7412b"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc": {
+      "md5": "8df2857863de26c065491d8969285892"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface": {
+      "md5": "09cdf4f40bd89f7e250aec18e8e1b2e2"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/arm64.swiftdoc": {
+      "md5": "8df2857863de26c065491d8969285892"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/arm64.swiftinterface": {
+      "md5": "09cdf4f40bd89f7e250aec18e8e1b2e2"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc": {
+      "md5": "65d6b39af620e69427e5c06de8229b82"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface": {
+      "md5": "968c3be8d3a895a866818ddd433a4695"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/x86_64.swiftdoc": {
+      "md5": "65d6b39af620e69427e5c06de8229b82"
+    },
+    "utssdk/app-ios/Frameworks/GamificationFramework.xcframework/ios-arm64_x86_64-simulator/GamificationFramework.framework/Modules/GamificationFramework.swiftmodule/x86_64.swiftinterface": {
+      "md5": "968c3be8d3a895a866818ddd433a4695"
+    }
+  }
+}
