@@ -21,28 +21,6 @@
       </text>
     </view>
 
-    <!-- Open Game Screen Button -->
-    <view class="button-wrapper">
-      <button
-        class="native-btn"
-        @click="openGameScreen"
-        :disabled="loading"
-        hover-class="native-btn-hover"
-      >
-        <text class="btn-text">
-          {{ loading ? "Opening..." : "Open Game Screen" }}
-        </text>
-      </button>
-    </view>
-
-    <!-- Result Message -->
-    <view v-if="resultMessage" class="result-box" :class="resultStatus">
-      <text class="result-icon">{{
-        resultStatus === "success" ? "✓" : "✗"
-      }}</text>
-      <text class="result-text">{{ resultMessage }}</text>
-    </view>
-
     <!-- TEST ONLY: new UTS-based Android path, not wired into the main
          button above. Remove this block once the UTS Android path is
          verified (or confirmed unnecessary) by the Android dev. -->
