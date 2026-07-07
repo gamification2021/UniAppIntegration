@@ -1,0 +1,13 @@
+# HBuilderX build output — never commit
+unpackage/
+
+# Android Gradle build cache and outputs
+android-plugin-src/.gradle/
+android-plugin-src/build/
+android-plugin-src/local.properties
+
+# macOS metadata
+.DS_Store
+
+# HBuilderX local workspace settings
+.hbuilderx/

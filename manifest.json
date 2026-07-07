@@ -1,53 +1,55 @@
 {
-    "name" : "NativeScreenApp",
-    "appid" : "__UNI__GB628988",
-    "description" : "UniApp with native AAR (Android) and XCFramework (iOS) integration",
-    "versionName" : "1.0.0",
-    "versionCode" : "100",
-    "transformPx" : false,
-    "app-plus" : {
-        "usingComponents" : true,
-        "nvueStyleCompiler" : "uni-compiler",
-        "compilerVersion" : 3,
-        "splashscreen" : {
-            "alwaysShowBeforeRender" : true,
-            "waiting" : true,
-            "autoclose" : true,
-            "delay" : 0
-        },
-        "modules" : {},
-        "distribute" : {
-            "android" : {
-                "packagename" : "com.example.nativescreenapp",
-                "minSdkVersion" : 24,
-                "targetSdkVersion" : 33,
-                "permissions" : [ "<uses-permission android:name=\"android.permission.INTERNET\"/>" ],
-                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ]
-            },
-            "ios" : {
-                "bundleId" : "com.6d.Gamification",
-                "deploymentTarget" : "12.0",
-                "dSYMs" : false
-            },
-            "sdkConfigs" : {}
-        }
+  "name": "NativeScreenApp",
+  "appid": "__UNI__G77EA11F",
+  "description": "UniApp with native AAR (Android) and XCFramework (iOS) integration",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-compiler",
+    "compilerVersion": 3,
+    "splashscreen": {
+      "alwaysShowBeforeRender": true,
+      "waiting": true,
+      "autoclose": true,
+      "delay": 0
     },
-    "quickapp" : {},
-    "mp-weixin" : {
-        "appid" : "",
-        "setting" : {
-            "urlCheck" : false
-        },
-        "usingComponents" : true
+    "modules": {},
+    "distribute": {
+      "android": {
+        "packagename": "com.example.nativescreenapp",
+        "minSdkVersion": 24,
+        "targetSdkVersion": 33,
+        "permissions": [
+          "<uses-permission android:name=\"android.permission.INTERNET\"/>"
+        ],
+        "abiFilters": ["armeabi-v7a", "arm64-v8a"]
+      },
+      "ios": {
+        "bundleId": "com.6d.Gamification",
+        "deploymentTarget": "12.0",
+        "dSYMs": false
+      },
+      "sdkConfigs": {}
+    }
+  },
+  "quickapp": {},
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": false
     },
-    "mp-alipay" : {
-        "usingComponents" : true
-    },
-    "mp-baidu" : {
-        "usingComponents" : true
-    },
-    "uniStatistics" : {
-        "enable" : false
-    },
-    "vueVersion" : "2"
+    "usingComponents": true
+  },
+  "mp-alipay": {
+    "usingComponents": true
+  },
+  "mp-baidu": {
+    "usingComponents": true
+  },
+  "uniStatistics": {
+    "enable": false
+  },
+  "vueVersion": "2"
 }

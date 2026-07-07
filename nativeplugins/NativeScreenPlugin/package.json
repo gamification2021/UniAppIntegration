@@ -1,0 +1,21 @@
+{
+	"name": "NativeScreenPlugin",
+	"id": "NativeScreenPlugin",
+	"version": "1.0.0",
+	"description": "Opens the SpinAndWin native screen from an AAR (Android) on button tap. iOS is handled separately via uni_modules/native-screen-plugin (UTS).",
+	"_dp_type": "nativeplugin",
+	"_dp_nativeplugin": {
+		"android": {
+			"plugins": [
+				{
+					"type": "module",
+					"name": "NativeScreenPlugin",
+					"class": "com.example.nativescreenplugin.NativeScreenModule"
+				}
+			],
+			"integrateType": "aar",
+			"dependencies": [],
+			"abis": ["armeabi-v7a", "arm64-v8a"]
+		}
+	}
+}
