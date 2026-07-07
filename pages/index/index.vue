@@ -6,56 +6,47 @@
       <text class="subtitle">UniApp · AAR · XCFramework</text>
     </view>
 
-    <!-- Platform Card -->
+    <!-- Card -->
     <view class="card">
-      <view
-        class="platform-badge"
-        :class="isAndroid ? 'android-badge' : 'ios-badge'"
-      >
-        <text class="platform-text">{{ platformLabel }}</text>
-      </view>
       <text class="card-title">Native Library Integration</text>
       <text class="card-description">
-        Tap the button below to open the native screen provided by the
-        {{ isAndroid ? "AAR library (Android)" : "XCFramework (iOS)" }}.
+        Tap the button below to open the native Gamification screen.
       </text>
     </view>
 
-    <!-- TEST ONLY: new UTS-based Android path, not wired into the main
-         button above. Remove this block once the UTS Android path is
-         verified (or confirmed unnecessary) by the Android dev. -->
-    <view v-if="isAndroid" class="button-wrapper">
+    <!-- Open Game Screen Button — same for both platforms, no platform check -->
+    <view class="button-wrapper">
       <button
         class="native-btn"
-        @click="testUtsAndroid"
-        :disabled="utsLoading"
+        @click="openGameScreen"
+        :disabled="loading"
         hover-class="native-btn-hover"
       >
         <text class="btn-text">
-          {{ utsLoading ? "Testing..." : "TEST: UTS Android (experimental)" }}
+          {{ loading ? "Opening..." : "Open Game Screen" }}
         </text>
       </button>
     </view>
-    <view v-if="utsResultMessage" class="result-box" :class="utsResultStatus">
+
+    <!-- Result Message -->
+    <view v-if="resultMessage" class="result-box" :class="resultStatus">
       <text class="result-icon">{{
-        utsResultStatus === "success" ? "✓" : "✗"
+        resultStatus === "success" ? "✓" : "✗"
       }}</text>
-      <text class="result-text">{{ utsResultMessage }}</text>
+      <text class="result-text">{{ resultMessage }}</text>
     </view>
 
     <!-- Info Box -->
     <view class="info-box">
       <text class="info-title">How it works</text>
       <text class="info-item"
-        >• Android: Plugin calls InitiateGame().openGameScreen() from
-        gamification_library.aar</text
+        >• Same JS call on both platforms: uni_modules/native-screen-plugin</text
       >
       <text class="info-item"
-        >• iOS: Plugin Framework presents ViewController from the
-        XCFramework</text
+        >• Android: UTS calls SpinAndWinActivity from spin_and_win-debug.aar</text
       >
       <text class="info-item"
-        >• Pass apiKey, msisdn, language, gameType, campaignId, token</text
+        >• iOS: UTS calls Game.openGame() from GamificationFramework.xcframework</text
       >
     </view>
   </view>
@@ -64,24 +55,9 @@
 <script>
 // UTS plugin (uni_modules/native-screen-plugin) — HBuilderX compiles this
 // automatically per-platform: on iOS this resolves to utssdk/app-ios/index.uts,
-// on Android to utssdk/app-android/index.uts. Same import, different native
-// code underneath depending on build target.
-import { openGameScreen as utsOpenGameScreen } from "@/uni_modules/native-screen-plugin";
-
-// Android: existing AAR-based native plugin — unchanged.
-// Not available on H5 or WeChat Mini Program.
-const sysInfo = uni.getSystemInfoSync();
-const isApp = sysInfo.uniPlatform === "app";
-const isAndroidPlatform = sysInfo.platform === "android";
-
-let nativePlugin = null;
-if (isApp && isAndroidPlatform) {
-  try {
-    nativePlugin = uni.requireNativePlugin("NativeScreenPlugin");
-  } catch (e) {
-    console.warn("NativeScreenPlugin not loaded:", e);
-  }
-}
+// on Android to utssdk/app-android/index.uts. Same import and same call for
+// both platforms — no platform branching needed here.
+import { openGameScreen } from "@/uni_modules/native-screen-plugin";
 
 export default {
   data() {
@@ -89,20 +65,16 @@ export default {
       loading: false,
       resultMessage: "",
       resultStatus: "",
-      isAndroid: false,
-      platformLabel: "App",
-      utsLoading: false,
-      utsResultMessage: "",
-      utsResultStatus: "",
     };
   },
-  onLoad() {
-    this.isAndroid = isAndroidPlatform;
-    this.platformLabel = this.isAndroid ? "🤖 Android" : " iOS";
-  },
   methods: {
+    isNativeApp() {
+      // Not available on H5 or WeChat Mini Program — only the compiled app.
+      return uni.getSystemInfoSync().uniPlatform === "app";
+    },
+
     openGameScreen() {
-      if (!isApp) {
+      if (!this.isNativeApp()) {
         uni.showModal({
           title: "Not Available",
           content:
@@ -115,57 +87,33 @@ export default {
       this.loading = true;
       this.resultMessage = "";
 
-      const handleResult = (result) => {
-        this.loading = false;
-
-        if (result === "success" || (result && result.action)) {
-          this.resultStatus = "success";
-          this.resultMessage = "Game screen opened successfully";
-        } else {
-          this.resultStatus = "error";
-          this.resultMessage =
-            (result && result.errMsg) || result || "Unknown error occurred";
-        }
-      };
-
-      if (isAndroidPlatform) {
-        if (!nativePlugin) {
-          this.loading = false;
-          this.resultStatus = "error";
-          this.resultMessage = "NativeScreenPlugin not loaded.";
-          return;
-        }
-        nativePlugin.openGameScreen(handleResult);
-      } else {
-        utsOpenGameScreen({
-          success: (res) => handleResult(res),
-          fail: (err) => handleResult(err),
-        });
-      }
+      openGameScreen({
+        success: (res) => this.handleResult(res),
+        fail: (err) => this.handleResult(err),
+      });
     },
 
-    // TEST ONLY — calls the new UTS Android implementation
-    // (uni_modules/native-screen-plugin/utssdk/app-android/index.uts)
-    // directly, bypassing the proven nativeplugins/NativeScreenPlugin path
-    // above. Use this to verify the UTS path works before considering a
-    // switch. Safe to remove once done testing.
-    testUtsAndroid() {
-      this.utsLoading = true;
-      this.utsResultMessage = "";
+    handleResult(result) {
+      this.loading = false;
 
-      utsOpenGameScreen({
-        success: (res) => {
-          this.utsLoading = false;
-          this.utsResultStatus = "success";
-          this.utsResultMessage = "UTS Android: game screen opened successfully";
-        },
-        fail: (err) => {
-          this.utsLoading = false;
-          this.utsResultStatus = "error";
-          this.utsResultMessage =
-            "UTS Android error: " + ((err && err.errMsg) || err || "unknown");
-        },
-      });
+      if (result === "success" || (result && result.action)) {
+        this.resultStatus = "success";
+
+        const action = result && result.action;
+        if (action === "back") {
+          this.resultMessage = "User tapped back inside the SDK screen";
+          // TODO: your app-specific handling when the user taps back
+        } else if (action) {
+          this.resultMessage = "SDK action: " + action;
+          // TODO: your app-specific handling for any other action
+        } else {
+          this.resultMessage = "Game screen opened successfully";
+        }
+      } else {
+        this.resultStatus = "error";
+        this.resultMessage =
+          (result && result.errMsg) || result || "Unknown error occurred";
+      }
     },
   },
 };
@@ -209,27 +157,6 @@ export default {
   width: 100%;
   margin-bottom: 48rpx;
   border: 1rpx solid rgba(255, 255, 255, 0.25);
-
-  .platform-badge {
-    display: inline-flex;
-    padding: 10rpx 30rpx;
-    border-radius: 50rpx;
-    margin-bottom: 28rpx;
-
-    &.android-badge {
-      background: rgba(164, 198, 57, 0.85);
-    }
-
-    &.ios-badge {
-      background: rgba(90, 90, 95, 0.85);
-    }
-  }
-
-  .platform-text {
-    font-size: 26rpx;
-    font-weight: 600;
-    color: #ffffff;
-  }
 
   .card-title {
     display: block;
