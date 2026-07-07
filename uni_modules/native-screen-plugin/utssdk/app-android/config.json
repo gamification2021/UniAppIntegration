@@ -1,15 +1,7 @@
 {
-	"dependencies": [
-<<<<<<< HEAD
-		"androidx.appcompat:appcompat:1.7.1",
-		"androidx.constraintlayout:constraintlayout:2.2.1",
-		"com.google.android.material:material:1.14.0"
-=======
-		"androidx.appcompat:appcompat:1.6.0",
-		"androidx.constraintlayout:constraintlayout:2.1.4",
-		"com.google.android.material:material:1.7.0",
-		"com.airbnb.android:lottie:3.3.1",
-		"com.github.peterbetos:LuckyWheel:ed811a46b6"
->>>>>>> 140b2be9867c158d1fae7e682e2c1bf89c056962
-	]
+  "dependencies": [
+    "androidx.appcompat:appcompat:1.7.1",
+    "androidx.constraintlayout:constraintlayout:2.2.1",
+    "com.google.android.material:material:1.14.0"
+  ]
 }
