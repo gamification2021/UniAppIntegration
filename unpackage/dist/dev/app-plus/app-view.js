@@ -359,18 +359,74 @@ var render = function () {
             1
           )
         : _vm._e(),
+      _vm._$g(15, "i")
+        ? _c(
+            "uni-view",
+            { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } },
+            [
+              _c(
+                "v-uni-button",
+                {
+                  staticClass: _vm._$g(16, "sc"),
+                  attrs: {
+                    disabled: _vm._$g(16, "a-disabled"),
+                    "hover-class": "native-btn-hover",
+                    _i: 16,
+                  },
+                  on: {
+                    click: function ($event) {
+                      return _vm.$handleViewEvent($event)
+                    },
+                  },
+                },
+                [
+                  _c(
+                    "v-uni-text",
+                    { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
+                    [_vm._v(" " + _vm._$g(17, "t0-0") + " ")]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._$g(18, "i")
+        ? _c(
+            "uni-view",
+            {
+              staticClass: _vm._$g(18, "sc"),
+              class: _vm._$g(18, "c"),
+              attrs: { _i: 18 },
+            },
+            [
+              _c(
+                "v-uni-text",
+                { staticClass: _vm._$g(19, "sc"), attrs: { _i: 19 } },
+                [_vm._v(_vm._$g(19, "t0-0"))]
+              ),
+              _c(
+                "v-uni-text",
+                { staticClass: _vm._$g(20, "sc"), attrs: { _i: 20 } },
+                [_vm._v(_vm._$g(20, "t0-0"))]
+              ),
+            ],
+            1
+          )
+        : _vm._e(),
       _c(
         "uni-view",
-        { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } },
+        { staticClass: _vm._$g(21, "sc"), attrs: { _i: 21 } },
         [
           _c(
             "v-uni-text",
-            { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
+            { staticClass: _vm._$g(22, "sc"), attrs: { _i: 22 } },
             [_vm._v("How it works")]
           ),
           _c(
             "v-uni-text",
-            { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
+            { staticClass: _vm._$g(23, "sc"), attrs: { _i: 23 } },
             [
               _vm._v(
                 "• Android: Plugin calls InitiateGame().openGameScreen() from gamification_library.aar"
@@ -379,7 +435,7 @@ var render = function () {
           ),
           _c(
             "v-uni-text",
-            { staticClass: _vm._$g(18, "sc"), attrs: { _i: 18 } },
+            { staticClass: _vm._$g(24, "sc"), attrs: { _i: 24 } },
             [
               _vm._v(
                 "• iOS: Plugin Framework presents ViewController from the XCFramework"
@@ -388,7 +444,7 @@ var render = function () {
           ),
           _c(
             "v-uni-text",
-            { staticClass: _vm._$g(19, "sc"), attrs: { _i: 19 } },
+            { staticClass: _vm._$g(25, "sc"), attrs: { _i: 25 } },
             [
               _vm._v(
                 "• Pass apiKey, msisdn, language, gameType, campaignId, token"

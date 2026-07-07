@@ -1,0 +1,7 @@
+{
+	"dependencies": [
+		"androidx.appcompat:appcompat:1.7.1",
+		"androidx.constraintlayout:constraintlayout:2.2.1",
+		"com.google.android.material:material:1.14.0"
+	]
+}

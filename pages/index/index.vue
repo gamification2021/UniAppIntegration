@@ -43,6 +43,28 @@
       <text class="result-text">{{ resultMessage }}</text>
     </view>
 
+    <!-- TEST ONLY: new UTS-based Android path, not wired into the main
+         button above. Remove this block once the UTS Android path is
+         verified (or confirmed unnecessary) by the Android dev. -->
+    <view v-if="isAndroid" class="button-wrapper">
+      <button
+        class="native-btn"
+        @click="testUtsAndroid"
+        :disabled="utsLoading"
+        hover-class="native-btn-hover"
+      >
+        <text class="btn-text">
+          {{ utsLoading ? "Testing..." : "TEST: UTS Android (experimental)" }}
+        </text>
+      </button>
+    </view>
+    <view v-if="utsResultMessage" class="result-box" :class="utsResultStatus">
+      <text class="result-icon">{{
+        utsResultStatus === "success" ? "✓" : "✗"
+      }}</text>
+      <text class="result-text">{{ utsResultMessage }}</text>
+    </view>
+
     <!-- Info Box -->
     <view class="info-box">
       <text class="info-title">How it works</text>
@@ -62,12 +84,20 @@
 </template>
 
 <script>
-// Require the native plugin — only available when running on a real device/emulator
-// Not available on H5 or WeChat Mini Program
-const isApp = uni.getSystemInfoSync().uniPlatform === "app";
-let nativePlugin = null;
+// UTS plugin (uni_modules/native-screen-plugin) — HBuilderX compiles this
+// automatically per-platform: on iOS this resolves to utssdk/app-ios/index.uts,
+// on Android to utssdk/app-android/index.uts. Same import, different native
+// code underneath depending on build target.
+import { openGameScreen as utsOpenGameScreen } from "@/uni_modules/native-screen-plugin";
 
-if (isApp) {
+// Android: existing AAR-based native plugin — unchanged.
+// Not available on H5 or WeChat Mini Program.
+const sysInfo = uni.getSystemInfoSync();
+const isApp = sysInfo.uniPlatform === "app";
+const isAndroidPlatform = sysInfo.platform === "android";
+
+let nativePlugin = null;
+if (isApp && isAndroidPlatform) {
   try {
     nativePlugin = uni.requireNativePlugin("NativeScreenPlugin");
   } catch (e) {
@@ -83,16 +113,18 @@ export default {
       resultStatus: "",
       isAndroid: false,
       platformLabel: "App",
+      utsLoading: false,
+      utsResultMessage: "",
+      utsResultStatus: "",
     };
   },
   onLoad() {
-    const sysInfo = uni.getSystemInfoSync();
-    this.isAndroid = sysInfo.platform === "android";
+    this.isAndroid = isAndroidPlatform;
     this.platformLabel = this.isAndroid ? "🤖 Android" : " iOS";
   },
   methods: {
     openGameScreen() {
-      if (!isApp || !nativePlugin) {
+      if (!isApp) {
         uni.showModal({
           title: "Not Available",
           content:
@@ -105,16 +137,56 @@ export default {
       this.loading = true;
       this.resultMessage = "";
 
-      nativePlugin.openGameScreen((result) => {
+      const handleResult = (result) => {
         this.loading = false;
 
-        if (result === "success") {
+        if (result === "success" || (result && result.action)) {
           this.resultStatus = "success";
           this.resultMessage = "Game screen opened successfully";
         } else {
           this.resultStatus = "error";
-          this.resultMessage = result || "Unknown error occurred";
+          this.resultMessage =
+            (result && result.errMsg) || result || "Unknown error occurred";
         }
+      };
+
+      if (isAndroidPlatform) {
+        if (!nativePlugin) {
+          this.loading = false;
+          this.resultStatus = "error";
+          this.resultMessage = "NativeScreenPlugin not loaded.";
+          return;
+        }
+        nativePlugin.openGameScreen(handleResult);
+      } else {
+        utsOpenGameScreen({
+          success: (res) => handleResult(res),
+          fail: (err) => handleResult(err),
+        });
+      }
+    },
+
+    // TEST ONLY — calls the new UTS Android implementation
+    // (uni_modules/native-screen-plugin/utssdk/app-android/index.uts)
+    // directly, bypassing the proven nativeplugins/NativeScreenPlugin path
+    // above. Use this to verify the UTS path works before considering a
+    // switch. Safe to remove once done testing.
+    testUtsAndroid() {
+      this.utsLoading = true;
+      this.utsResultMessage = "";
+
+      utsOpenGameScreen({
+        success: (res) => {
+          this.utsLoading = false;
+          this.utsResultStatus = "success";
+          this.utsResultMessage = "UTS Android: game screen opened successfully";
+        },
+        fail: (err) => {
+          this.utsLoading = false;
+          this.utsResultStatus = "error";
+          this.utsResultMessage =
+            "UTS Android error: " + ((err && err.errMsg) || err || "unknown");
+        },
       });
     },
   },

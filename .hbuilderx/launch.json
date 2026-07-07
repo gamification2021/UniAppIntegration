@@ -5,8 +5,13 @@
             "customPlaygroundType" : "local",
             "localRepoPath" : "D:/Uniapp",
             "packageName" : "io.dcloud.HBuilder",
-            "playground" : "custom",
+            "playground" : "standard",
             "type" : "uni-app:app-android"
+        },
+        {
+            "customPlaygroundType" : "local",
+            "playground" : "custom",
+            "type" : "uni-app:app-ios"
         }
     ]
 }
